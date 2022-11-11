@@ -1,7 +1,7 @@
 version: 2
 jobs:
   angular:
-    
+    resource_class: small
     docker:
       - image: docker:18.06.3-ce-git
     steps:
@@ -15,7 +15,7 @@ jobs:
             docker run -e CI=true ulminase/redis:latest
       #############################
   java:
-      
+      resource_class: small
       docker:
         - image: docker:18.06.3-ce-git
       steps:
@@ -28,7 +28,7 @@ jobs:
               docker run -e CI=true hello-world:latest
               docker run -e CI=true ulminase/redis:latest
   python:
-    
+    resource_class: small
     docker:
       - image: docker:18.06.3-ce-git
     steps:
@@ -42,7 +42,7 @@ jobs:
             docker run -e CI=true ulminase/redis:latest
       
   vue:
-      
+      resource_class: small
       docker:
         - image: docker:18.06.3-ce-git
       steps:
@@ -55,7 +55,7 @@ jobs:
               docker run -e CI=true hello-world:latest
               docker run -e CI=true ulminase/redis:latest
   node:
-    
+    resource_class: small
     docker:
       - image: docker:18.06.3-ce-git
     steps:
